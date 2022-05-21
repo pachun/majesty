@@ -147,8 +147,411 @@ export const nobles = new Set<Noble>([
 ])
 export const noblePrestigePoints = 3
 
+type NumberOfResourcesRequiredToBuyDevelopmentCard =
+  | 0
+  | 1
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | 7
+type DevelopmentCardPrestigePoints = 0 | 1 | 2 | 3 | 4 | 5
+
+interface DevelopmentCard {
+  prestigePoints: DevelopmentCardPrestigePoints
+  bonus: "Ruby" | "Diamond" | "Onyx" | "Emerald" | "Sapphire"
+  numberOfDiamondsRequiredToBuy: NumberOfResourcesRequiredToBuyDevelopmentCard
+  numberOfRubiesRequiredToBuy: NumberOfResourcesRequiredToBuyDevelopmentCard
+  numberOfSapphiresRequiredToBuy: NumberOfResourcesRequiredToBuyDevelopmentCard
+  numberOfOnyxesRequiredToBuy: NumberOfResourcesRequiredToBuyDevelopmentCard
+  numberOfEmeraldsRequiredToBuy: NumberOfResourcesRequiredToBuyDevelopmentCard
+}
+// const emptyDevelopmentCard: Partial<DevelopmentCard> = {
+//   prestigePoints: 0,
+//   numberOfDiamondsRequiredToBuy: 0,
+//   numberOfRubiesRequiredToBuy: 0,
+//   numberOfSapphiresRequiredToBuy: 0,
+//   numberOfOnyxesRequiredToBuy: 0,
+//   numberOfEmeraldsRequiredToBuy: 0,
+// }
+
+const levelOneDevelopmentCards: DevelopmentCard[] = [
+  {
+    prestigePoints: 0,
+    bonus: "Sapphire",
+    numberOfDiamondsRequiredToBuy: 1,
+    numberOfRubiesRequiredToBuy: 2,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 1,
+    numberOfEmeraldsRequiredToBuy: 1,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "Emerald",
+    numberOfDiamondsRequiredToBuy: 1,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 3,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 1,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "Emerald",
+    numberOfDiamondsRequiredToBuy: 1,
+    numberOfRubiesRequiredToBuy: 1,
+    numberOfSapphiresRequiredToBuy: 1,
+    numberOfOnyxesRequiredToBuy: 1,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+  {
+    prestigePoints: 0,
+    bonus: "",
+    numberOfDiamondsRequiredToBuy: 0,
+    numberOfRubiesRequiredToBuy: 0,
+    numberOfSapphiresRequiredToBuy: 0,
+    numberOfOnyxesRequiredToBuy: 0,
+    numberOfEmeraldsRequiredToBuy: 0,
+  },
+]
+const levelTwoDevelopmentCards: DevelopmentCard[] = []
+const levelThreeDevelopmentCards: DevelopmentCard[] = []
+
+const stuff = {
+  developmentCards: [
+    levelOneDevelopmentCards,
+    levelTwoDevelopmentCards,
+    levelThreeDevelopmentCards,
+  ],
+  nobles: Array.from(nobles),
+}
+
 function App() {
-  return <ReactJson src={Array.from(nobles)} />
+  return <ReactJson src={stuff} />
 }
 
 export default App
