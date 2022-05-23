@@ -11,7 +11,7 @@ const Top = ({ developmentCard }: TopProps) => {
       style={{
         display: "flex",
         flexDirection: "row",
-        height: 80,
+        height: 60,
         borderBottom: "1px solid #000",
       }}
     >
@@ -26,10 +26,12 @@ const Top = ({ developmentCard }: TopProps) => {
         <span
           style={{
             fontFamily: "Lobster",
-            fontSize: 58,
+            fontSize: 48,
           }}
         >
-          {developmentCard.prestigePoints}
+          {developmentCard.prestigePoints > 0
+            ? developmentCard.prestigePoints
+            : ""}
         </span>
       </div>
       <div style={{ flex: 1 }} />
@@ -41,7 +43,7 @@ const Top = ({ developmentCard }: TopProps) => {
           alignItems: "center",
         }}
       >
-        <Bonus bonus={developmentCard.bonus} size={55} />
+        <Bonus bonus={developmentCard.bonus} size={40} />
       </div>
     </div>
   )
