@@ -30,18 +30,18 @@ const DevelopmentCardCostCircle = ({
         width: 40,
         height: 40,
         borderRadius: 20,
-        // backgroundColor,
+        marginRight: 10,
         background: `radial-gradient(#fff, ${backgroundColor})`,
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        border: "1px solid #000",
       }}
     >
       <span
         style={{
           fontFamily: "Lobster",
           fontSize: 26,
-          // color: costType === "Onyx" ? "#fff" : "#000",
         }}
       >
         {cost}
@@ -62,7 +62,6 @@ const Bottom = ({ developmentCard }: BottomProps) => {
         flexDirection: "column",
         justifyContent: "flex-end",
         flex: 1,
-        backgroundColor: "#e6e6e6",
         padding: 10,
       }}
     >
@@ -70,8 +69,9 @@ const Bottom = ({ developmentCard }: BottomProps) => {
         style={{
           display: "flex",
           flexDirection: "column-reverse",
-          height: 80,
-          width: 80,
+          justifyContent: "space-between",
+          height: 94,
+          width: 94,
           flexWrap: "wrap",
         }}
       >
