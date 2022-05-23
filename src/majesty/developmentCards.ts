@@ -9,17 +9,24 @@ type NumberOfResourcesRequiredToBuyDevelopmentCard =
   | 7
 type DevelopmentCardPrestigePoints = 0 | 1 | 2 | 3 | 4 | 5
 
-interface DevelopmentCard {
+export interface DevelopmentCardType {
   prestigePoints: DevelopmentCardPrestigePoints
-  bonus: "Ruby" | "Diamond" | "Onyx" | "Emerald" | "Sapphire"
+  bonus: "Diamond" | "Sapphire" | "Emerald" | "Ruby" | "Onyx"
   numberOfDiamondsRequiredToBuy: NumberOfResourcesRequiredToBuyDevelopmentCard
-  numberOfRubiesRequiredToBuy: NumberOfResourcesRequiredToBuyDevelopmentCard
   numberOfSapphiresRequiredToBuy: NumberOfResourcesRequiredToBuyDevelopmentCard
-  numberOfOnyxesRequiredToBuy: NumberOfResourcesRequiredToBuyDevelopmentCard
   numberOfEmeraldsRequiredToBuy: NumberOfResourcesRequiredToBuyDevelopmentCard
+  numberOfRubiesRequiredToBuy: NumberOfResourcesRequiredToBuyDevelopmentCard
+  numberOfOnyxesRequiredToBuy: NumberOfResourcesRequiredToBuyDevelopmentCard
 }
 
-export const levelOneDevelopmentCards: DevelopmentCard[] = [
+const shuffle = <T>(items: T[]) => {
+  return items
+    .map(value => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value)
+}
+
+export const levelOneDevelopmentCards: DevelopmentCardType[] = shuffle([
   {
     prestigePoints: 0,
     bonus: "Sapphire",
@@ -380,8 +387,9 @@ export const levelOneDevelopmentCards: DevelopmentCard[] = [
     numberOfRubiesRequiredToBuy: 2,
     numberOfOnyxesRequiredToBuy: 2,
   },
-]
-export const levelTwoDevelopmentCards: DevelopmentCard[] = [
+])
+
+export const levelTwoDevelopmentCards: DevelopmentCardType[] = shuffle([
   {
     prestigePoints: 2,
     bonus: "Onyx",
@@ -652,8 +660,9 @@ export const levelTwoDevelopmentCards: DevelopmentCard[] = [
     numberOfRubiesRequiredToBuy: 0,
     numberOfOnyxesRequiredToBuy: 0,
   },
-]
-export const levelThreeDevelopmentCards: DevelopmentCard[] = [
+])
+
+export const levelThreeDevelopmentCards: DevelopmentCardType[] = shuffle([
   {
     prestigePoints: 3,
     bonus: "Onyx",
@@ -834,7 +843,7 @@ export const levelThreeDevelopmentCards: DevelopmentCard[] = [
     numberOfRubiesRequiredToBuy: 7,
     numberOfOnyxesRequiredToBuy: 0,
   },
-]
+])
 
 const developmentCards = {
   levelOneDevelopmentCards,
