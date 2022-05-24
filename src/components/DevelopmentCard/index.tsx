@@ -1,4 +1,4 @@
-import { DevelopmentCardType } from "./../majesty/developmentCards"
+import { DevelopmentCardType } from "types/DevelopmentCardType"
 import Top from "./Top"
 import Bottom from "./Bottom"
 

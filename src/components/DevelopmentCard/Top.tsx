@@ -1,4 +1,4 @@
-import { DevelopmentCardType } from "majesty/developmentCards"
+import { DevelopmentCardType } from "types/DevelopmentCardType"
 import Bonus from "./Bonus"
 
 interface TopProps {
@@ -18,7 +18,7 @@ const Top = ({ developmentCard }: TopProps) => {
       </div>
       <div style={styles.middleSpacer} />
       <div style={styles.bonusContainer}>
-        <Bonus bonus={developmentCard.bonus} size={40} />
+        <Bonus developmentCard={developmentCard} size={40} />
       </div>
     </div>
   )
