@@ -1,13 +1,6 @@
 import { DevelopmentCardType } from "types/DevelopmentCardType"
 
-const shuffle = <T>(items: T[]) => {
-  return items
-    .map(value => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value)
-}
-
-export const levelOneDevelopmentCards: DevelopmentCardType[] = shuffle([
+export const levelOneDevelopmentCards: DevelopmentCardType[] = [
   {
     prestigePoints: 0,
     bonus: "Sapphire",
@@ -368,9 +361,9 @@ export const levelOneDevelopmentCards: DevelopmentCardType[] = shuffle([
     numberOfRubiesRequiredToBuy: 2,
     numberOfOnyxesRequiredToBuy: 2,
   },
-])
+]
 
-export const levelTwoDevelopmentCards: DevelopmentCardType[] = shuffle([
+export const levelTwoDevelopmentCards: DevelopmentCardType[] = [
   {
     prestigePoints: 2,
     bonus: "Onyx",
@@ -641,9 +634,9 @@ export const levelTwoDevelopmentCards: DevelopmentCardType[] = shuffle([
     numberOfRubiesRequiredToBuy: 0,
     numberOfOnyxesRequiredToBuy: 0,
   },
-])
+]
 
-export const levelThreeDevelopmentCards: DevelopmentCardType[] = shuffle([
+export const levelThreeDevelopmentCards: DevelopmentCardType[] = [
   {
     prestigePoints: 3,
     bonus: "Onyx",
@@ -824,12 +817,4 @@ export const levelThreeDevelopmentCards: DevelopmentCardType[] = shuffle([
     numberOfRubiesRequiredToBuy: 7,
     numberOfOnyxesRequiredToBuy: 0,
   },
-])
-
-const developmentCards = {
-  levelOneDevelopmentCards,
-  levelTwoDevelopmentCards,
-  levelThreeDevelopmentCards,
-}
-
-export default developmentCards
+]

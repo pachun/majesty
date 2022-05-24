@@ -1,11 +1,17 @@
 import ReactJson from "react-json-view"
 import nobles from "majesty/nobles"
-import developmentCards from "majesty/developmentCards"
-import DevelopmentCard from "DevelopmentCard"
-import DevelopmentCardDeck from "DevelopmentCardDeck"
+import {
+  levelOneDevelopmentCards,
+  levelTwoDevelopmentCards,
+  levelThreeDevelopmentCards,
+} from "majesty/developmentCards"
+import DevelopmentCard from "components/DevelopmentCard"
+import DevelopmentCardDeck from "components/DevelopmentCardDeck"
 
 const stuff = {
-  ...developmentCards,
+  levelOneDevelopmentCards,
+  levelTwoDevelopmentCards,
+  levelThreeDevelopmentCards,
   nobles: Array.from(nobles),
 }
 
