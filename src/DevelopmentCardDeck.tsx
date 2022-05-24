@@ -1,14 +1,11 @@
 import { width, height, borderRadius, marginRight } from "./DevelopmentCard"
-import { DevelopmentCardType } from "./majesty/developmentCards"
 
 interface DevelopmentCardDeckProps {
   developmentCardLevel: 1 | 2 | 3
-  developmentCards: DevelopmentCardType[]
 }
 
 const DevelopmentCardDeck = ({
   developmentCardLevel,
-  developmentCards,
 }: DevelopmentCardDeckProps) => {
   const deckColorsByDevelopmentCardLevel = {
     1: "#316226",
