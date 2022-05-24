@@ -118,7 +118,7 @@ const elizabethTheFirstOfEngland: ElizabethTheFirstOfEngland = {
   requiredEmeraldBonuses: 4,
 }
 
-type Noble =
+export type NobleType =
   | IsabellaOfCastille
   | FrancoisTheFirst
   | MaryStuart
@@ -130,7 +130,7 @@ type Noble =
   | SolimanTheMagnificent
   | ElizabethTheFirstOfEngland
 
-const nobles = new Set<Noble>([
+const nobles = new Set<NobleType>([
   isabellaOfCastille,
   francoisTheFirst,
   maryStuart,
