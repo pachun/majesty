@@ -1,6 +1,6 @@
 import { width, marginRight, borderRadius } from "components/DevelopmentCard"
 import { NobleType } from "types/NobleType"
-import CostCircle from "./CostCircle"
+import BonusRequirement from "./BonusRequirement"
 
 interface NobleProps {
   noble: NobleType
@@ -11,22 +11,28 @@ const Noble = ({ noble }: NobleProps) => {
     <div style={styles.container}>
       <div style={styles.costContainer}>
         {noble.requiredDiamondBonuses && (
-          <CostCircle costType="Diamond" cost={noble.requiredDiamondBonuses} />
+          <BonusRequirement
+            bonus="Diamond"
+            amount={noble.requiredDiamondBonuses}
+          />
         )}
         {noble.requiredSapphireBonuses && (
-          <CostCircle
-            costType="Sapphire"
-            cost={noble.requiredSapphireBonuses}
+          <BonusRequirement
+            bonus="Sapphire"
+            amount={noble.requiredSapphireBonuses}
           />
         )}
         {noble.requiredEmeraldBonuses && (
-          <CostCircle costType="Emerald" cost={noble.requiredEmeraldBonuses} />
+          <BonusRequirement
+            bonus="Emerald"
+            amount={noble.requiredEmeraldBonuses}
+          />
         )}
         {noble.requiredRubyBonuses && (
-          <CostCircle costType="Ruby" cost={noble.requiredRubyBonuses} />
+          <BonusRequirement bonus="Ruby" amount={noble.requiredRubyBonuses} />
         )}
         {noble.requiredOnyxBonuses && (
-          <CostCircle costType="Onyx" cost={noble.requiredOnyxBonuses} />
+          <BonusRequirement bonus="Onyx" amount={noble.requiredOnyxBonuses} />
         )}
       </div>
       <div style={styles.centerSpacer} />
@@ -49,7 +55,6 @@ const styles = {
   },
   costContainer: {
     flex: 1,
-    backgroundColor: "red",
     display: "flex",
     justifyContent: "flex-end",
     flexDirection: "column" as const,

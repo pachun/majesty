@@ -1,18 +1,12 @@
 import { useMemo } from "react"
+import { BonusType } from "types/BonusType"
 
-type DevelopmentCardCostType =
-  | "Diamond"
-  | "Sapphire"
-  | "Emerald"
-  | "Ruby"
-  | "Onyx"
-
-interface DevelopmentCardCostCircleProps {
-  costType: DevelopmentCardCostType
-  cost: number
+interface BonusRequirementProps {
+  bonus: BonusType
+  amount: number
 }
 
-const CostCircle = ({ costType, cost }: DevelopmentCardCostCircleProps) => {
+const BonusRequirement = ({ bonus, amount }: BonusRequirementProps) => {
   const styles = useMemo(() => {
     const backgroundColor = {
       Diamond: "#ffffff",
@@ -20,33 +14,33 @@ const CostCircle = ({ costType, cost }: DevelopmentCardCostCircleProps) => {
       Emerald: "#7ad800",
       Ruby: "#ef4141",
       Onyx: "#5a6d78",
-    }[costType]
+    }[bonus]
     return stylesFunction(backgroundColor)
-  }, [costType])
+  }, [bonus])
 
   return (
     <div style={styles.container}>
-      <span style={styles.costLabel}>{cost}</span>
+      <span style={styles.amountLabel}>{amount}</span>
     </div>
   )
 }
 
 const stylesFunction = (backgroundColor: string) => ({
   container: {
-    width: 40,
+    width: 30,
     height: 40,
-    borderRadius: 20,
-    marginRight: 10,
+    borderRadius: 10,
     background: `radial-gradient(#fff, ${backgroundColor})`,
+    marginTop: 5,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     border: "1px solid #000",
   },
-  costLabel: {
+  amountLabel: {
     fontFamily: "Lobster",
     fontSize: 26,
   },
 })
 
-export default CostCircle
+export default BonusRequirement

@@ -1,3 +1,5 @@
+import { BonusType } from "types/BonusType"
+
 type NumberOfResourcesRequiredToBuyDevelopmentCard =
   | 0
   | 1
@@ -9,8 +11,6 @@ type NumberOfResourcesRequiredToBuyDevelopmentCard =
   | 7
 
 type DevelopmentCardPrestigePoints = 0 | 1 | 2 | 3 | 4 | 5
-
-type BonusType = "Diamond" | "Sapphire" | "Emerald" | "Ruby" | "Onyx"
 
 export interface DevelopmentCardType {
   prestigePoints: DevelopmentCardPrestigePoints
