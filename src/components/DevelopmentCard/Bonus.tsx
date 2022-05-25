@@ -1,18 +1,16 @@
 import { useMemo } from "react"
-import { DevelopmentCardType } from "types/DevelopmentCardType"
+import { BonusType } from "types/BonusType"
 
 interface BonusProps {
-  developmentCard: DevelopmentCardType
+  bonusType: BonusType
   size: number
 }
 
-const Bonus = ({ developmentCard, size }: BonusProps) => {
+const Bonus = ({ bonusType, size }: BonusProps) => {
   const styles = useMemo(() => stylesFunction(size), [size])
-  const imageSource = `/${developmentCard.bonus}.png`
+  const imageSource = `/${bonusType}.png`
 
-  return (
-    <img alt={developmentCard.bonus} style={styles.bonus} src={imageSource} />
-  )
+  return <img alt={bonusType} style={styles.bonus} src={imageSource} />
 }
 
 const stylesFunction = (size: number) => ({

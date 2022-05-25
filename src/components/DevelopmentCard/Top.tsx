@@ -18,7 +18,7 @@ const Top = ({ developmentCard }: TopProps) => {
       </div>
       <div style={styles.middleSpacer} />
       <div style={styles.bonusContainer}>
-        <Bonus developmentCard={developmentCard} size={40} />
+        <Bonus bonusType={developmentCard.bonus} size={40} />
       </div>
     </div>
   )
