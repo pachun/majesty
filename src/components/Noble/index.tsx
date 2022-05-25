@@ -1,5 +1,6 @@
 import { width, marginRight, borderRadius } from "components/DevelopmentCard"
 import { NobleType } from "types/NobleType"
+import CostCircle from "./CostCircle"
 
 interface NobleProps {
   noble: NobleType
@@ -8,22 +9,32 @@ interface NobleProps {
 const Noble = ({ noble }: NobleProps) => {
   return (
     <div style={styles.container}>
-      <div style={styles.costContainer}>{nobleCost(noble)}</div>
+      <div style={styles.costContainer}>
+        {noble.requiredDiamondBonuses && (
+          <CostCircle costType="Diamond" cost={noble.requiredDiamondBonuses} />
+        )}
+        {noble.requiredSapphireBonuses && (
+          <CostCircle
+            costType="Sapphire"
+            cost={noble.requiredSapphireBonuses}
+          />
+        )}
+        {noble.requiredEmeraldBonuses && (
+          <CostCircle costType="Emerald" cost={noble.requiredEmeraldBonuses} />
+        )}
+        {noble.requiredRubyBonuses && (
+          <CostCircle costType="Ruby" cost={noble.requiredRubyBonuses} />
+        )}
+        {noble.requiredOnyxBonuses && (
+          <CostCircle costType="Onyx" cost={noble.requiredOnyxBonuses} />
+        )}
+      </div>
       <div style={styles.centerSpacer} />
       <div style={styles.prestigePointsContainer}>
         <span style={styles.prestigePoints}>3</span>
       </div>
     </div>
   )
-}
-
-const nobleCost = (noble: NobleType) => {
-  return "hi"
-  // switch (noble.name) {
-  //   case "Machiavelli":
-  //     return null
-  //     break
-  // }
 }
 
 const styles = {
