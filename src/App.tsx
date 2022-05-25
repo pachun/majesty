@@ -5,19 +5,42 @@ import {
   levelTwoDevelopmentCards,
   levelThreeDevelopmentCards,
 } from "majesty/developmentCards"
-import DevelopmentCard from "components/DevelopmentCard"
+import DevelopmentCard, {
+  width,
+  marginRight,
+  borderRadius,
+} from "components/DevelopmentCard"
 import DevelopmentCardDeck from "components/DevelopmentCardDeck"
+import shuffle from "helpers/shuffle"
 
 const stuff = {
-  levelOneDevelopmentCards,
-  levelTwoDevelopmentCards,
-  levelThreeDevelopmentCards,
-  nobles: Array.from(nobles),
+  levelOneDevelopmentCards: shuffle(levelOneDevelopmentCards),
+  levelTwoDevelopmentCards: shuffle(levelTwoDevelopmentCards),
+  levelThreeDevelopmentCards: shuffle(levelThreeDevelopmentCards),
+  nobles: shuffle(Array.from(nobles)).slice(0, 5),
 }
 
 function App() {
   return (
     <div>
+      <div style={{ display: "flex", flexDirection: "row", overflowX: "auto" }}>
+        {stuff.nobles.map((noble, position) => (
+          <div
+            key={position}
+            style={{
+              width: width - 20,
+              marginRight,
+              height: width - 20,
+              borderRadius,
+              border: "1px solid #000",
+              padding: 10,
+            }}
+          >
+            {noble.name}
+          </div>
+        ))}
+      </div>
+      <div style={{ height: 10 }} />
       <div style={{ display: "flex", flexDirection: "row", overflowX: "auto" }}>
         <DevelopmentCardDeck developmentCardLevel={3} />
         {stuff.levelThreeDevelopmentCards

@@ -1,134 +1,69 @@
-interface IsabellaOfCastille {
-  name: "Isabella of Castille"
-  requiredDiamondBonuses: 4
-  requiredOnyxBonuses: 4
-}
-const isabellaOfCastille: IsabellaOfCastille = {
+import { NobleType } from "types/NobleType"
+
+const isabellaOfCastille: NobleType = {
   name: "Isabella of Castille",
   requiredDiamondBonuses: 4,
   requiredOnyxBonuses: 4,
 }
 
-interface FrancoisTheFirst {
-  name: "François 1st"
-  requiredOnyxBonuses: 3
-  requiredRubyBonuses: 3
-  requiredEmeraldBonuses: 3
-}
-const francoisTheFirst: FrancoisTheFirst = {
+const francoisTheFirst: NobleType = {
   name: "François 1st",
   requiredOnyxBonuses: 3,
   requiredRubyBonuses: 3,
   requiredEmeraldBonuses: 3,
 }
 
-interface MaryStuart {
-  name: "Mary Stuart"
-  requiredOnyxBonuses: 3
-  requiredSapphireBonuses: 3
-  requiredDiamondBonuses: 3
-}
-const maryStuart: MaryStuart = {
+const maryStuart: NobleType = {
   name: "Mary Stuart",
   requiredOnyxBonuses: 3,
   requiredSapphireBonuses: 3,
   requiredDiamondBonuses: 3,
 }
 
-interface CharlesTheFifth {
-  name: "Charles V"
-  requiredOnyxBonuses: 3
-  requiredRubyBonuses: 3
-  requiredDiamondBonuses: 3
-}
-const charlesTheFifth: CharlesTheFifth = {
+const charlesTheFifth: NobleType = {
   name: "Charles V",
   requiredOnyxBonuses: 3,
   requiredRubyBonuses: 3,
   requiredDiamondBonuses: 3,
 }
 
-interface Machiavelli {
-  name: "Machiavelli"
-  requiredSapphireBonuses: 4
-  requiredDiamondBonuses: 4
-}
-const machiavelli: Machiavelli = {
+const machiavelli: NobleType = {
   name: "Machiavelli",
   requiredSapphireBonuses: 4,
   requiredDiamondBonuses: 4,
 }
 
-interface CatherineOfMedici {
-  name: "Catherine of Medici"
-  requiredEmeraldBonuses: 3
-  requiredSapphireBonuses: 3
-  requiredRubyBonuses: 3
-}
-const catherineOfMedici: CatherineOfMedici = {
+const catherineOfMedici: NobleType = {
   name: "Catherine of Medici",
   requiredEmeraldBonuses: 3,
   requiredSapphireBonuses: 3,
   requiredRubyBonuses: 3,
 }
 
-interface HenryTheEighth {
-  name: "Henry VIII"
-  requiredOnyxBonuses: 4
-  requiredRubyBonuses: 4
-}
-const henryTheEighth: HenryTheEighth = {
+const henryTheEighth: NobleType = {
   name: "Henry VIII",
   requiredOnyxBonuses: 4,
   requiredRubyBonuses: 4,
 }
 
-interface AnneOfBrittany {
-  name: "Anne of Brittany"
-  requiredEmeraldBonuses: 3
-  requiredSapphireBonuses: 3
-  requiredDiamondBonuses: 3
-}
-const anneOfBrittany: AnneOfBrittany = {
+const anneOfBrittany: NobleType = {
   name: "Anne of Brittany",
   requiredEmeraldBonuses: 3,
   requiredSapphireBonuses: 3,
   requiredDiamondBonuses: 3,
 }
 
-interface SolimanTheMagnificent {
-  name: "Soliman the Magnificent"
-  requiredSapphireBonuses: 4
-  requiredEmeraldBonuses: 4
-}
-const solimanTheMagnificent: SolimanTheMagnificent = {
+const solimanTheMagnificent: NobleType = {
   name: "Soliman the Magnificent",
   requiredSapphireBonuses: 4,
   requiredEmeraldBonuses: 4,
 }
 
-interface ElizabethTheFirstOfEngland {
-  name: "Elizabeth I of England"
-  requiredRubyBonuses: 4
-  requiredEmeraldBonuses: 4
-}
-const elizabethTheFirstOfEngland: ElizabethTheFirstOfEngland = {
+const elizabethTheFirstOfEngland: NobleType = {
   name: "Elizabeth I of England",
   requiredRubyBonuses: 4,
   requiredEmeraldBonuses: 4,
 }
-
-export type NobleType =
-  | IsabellaOfCastille
-  | FrancoisTheFirst
-  | MaryStuart
-  | CharlesTheFifth
-  | Machiavelli
-  | CatherineOfMedici
-  | HenryTheEighth
-  | AnneOfBrittany
-  | SolimanTheMagnificent
-  | ElizabethTheFirstOfEngland
 
 const nobles = new Set<NobleType>([
   isabellaOfCastille,
