@@ -5,12 +5,9 @@ import {
   levelTwoDevelopmentCards,
   levelThreeDevelopmentCards,
 } from "majesty/developmentCards"
-import DevelopmentCard, {
-  width,
-  marginRight,
-  borderRadius,
-} from "components/DevelopmentCard"
+import DevelopmentCard from "components/DevelopmentCard"
 import DevelopmentCardDeck from "components/DevelopmentCardDeck"
+import Noble from "components/Noble"
 import shuffle from "helpers/shuffle"
 
 const stuff = {
@@ -23,21 +20,9 @@ const stuff = {
 function App() {
   return (
     <div>
-      <div style={{ display: "flex", flexDirection: "row", overflowX: "auto" }}>
+      <div style={{ display: "flex", flexDirection: "row" }}>
         {stuff.nobles.map((noble, position) => (
-          <div
-            key={position}
-            style={{
-              width: width - 20,
-              marginRight,
-              height: width - 20,
-              borderRadius,
-              border: "1px solid #000",
-              padding: 10,
-            }}
-          >
-            {noble.name}
-          </div>
+          <Noble key={position} noble={noble} />
         ))}
       </div>
       <div style={{ height: 10 }} />
